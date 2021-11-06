@@ -118,5 +118,5 @@ module.exports = {
       },
     },
   ],
-  pathPrefix: "/yudoworks.github.io",
+  pathPrefix: "/YudoWorks.github.io",
 };
