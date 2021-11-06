@@ -2,13 +2,9 @@ import { Link } from 'gatsby';
 import get from 'lodash/get';
 import React from 'react';
 
-import profileImg from '../../images/profile.jpg';
-
 const classes = {
   wrapper: 'block mb-6 md:flex',
-  imageWrapper: 'w-full max-w-150',
-  image: 'rounded-full transform transition-all duration-150 hover:scale-105',
-  contentWrapper: 'flex-none pt-6 md:pt-1 md:flex-1 md:pl-20',
+  contentWrapper: 'flex-none pt-6 md:pt-1 md:flex-1 md:pl',
   name: 'text-5xl text-gray-900 font-bold leading-tight hover:text-black',
   description: 'text-gray-600',
   list: 'mt-6 uppercase tracking-wider',
@@ -24,11 +20,6 @@ const Header = ({ metadata = {}, noBlog = false }) => {
 
   return (
     <div className={classes.wrapper}>
-      <div className={classes.imageWrapper}>
-        <Link to="/">
-          <img className={classes.image} src={profileImg} alt={metadata.name} />
-        </Link>
-      </div>
       <div className={classes.contentWrapper}>
         <h1 className={classes.name}>
           <Link to="/">{metadata.name}</Link>
